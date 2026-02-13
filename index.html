@@ -2,11 +2,56 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DramaBox</title>
+    
+    <meta name="description" content="NontonYuk - Platform streaming drama dan film terbaik dengan kualitas HD dan Subtitle Indonesia." />
+    <meta name="keywords" content="NontonYuk, streaming drama, drama china, drakor gratis, nonton film" />
+    <meta name="author" content="Smart" />
+    
+    <meta name="theme-color" content="#E50914" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>NontonYuk - Nonton Drama Sepuasnya</title>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #0d0d0c; /* Warna latar gelap ala Netflix */
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Animasi berkedip saat React sedang loading */
+      #root:empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #root:empty::after {
+        content: 'Memuat NontonYuk...';
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #E50914; /* Warna merah */
+        letter-spacing: 1px;
+        animation: kedip 1.5s infinite;
+      }
+      
+      @keyframes kedip {
+        0% { opacity: 0.4; }
+        50% { opacity: 1; }
+        100% { opacity: 0.4; }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
